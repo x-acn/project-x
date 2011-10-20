@@ -1,35 +1,49 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
 
 puts "Seeding database"
 puts "-------------------------------"
 
-# Create an initial Admin User
-admin_username = "admin"
-admin_email = "admin@#{Errbit::Config.host}"
+## Create an initial Admin User ##
+domain = Locomotive.config.domain
+admin_email = "admin@#{domain}"
 admin_pass  = 'password'
 
-puts "Creating an initial admin user:"
-puts "-- username: #{admin_username}"
-puts "-- email:    #{admin_email}"
-puts "-- password: #{admin_pass}"
-puts ""
-puts "Be sure to change these credentials ASAP!"
-user = User.where(:email => admin_email).first || User.new({
-  :name                   => 'Errbit Admin',
-  :email                  => admin_email,
-  :password               => admin_pass,
-  :password_confirmation  => admin_pass
-})
-user.username = admin_username if Errbit::Config.user_has_username
+admin = Account.where(:email => admin_email).first
+unless admin
+  puts "Creating an initial admin user:"
+  puts "-- email:    #{admin_email}"
+  puts "-- password: #{admin_pass}"
+  puts ""
+  puts "Be sure to change these credentials ASAP!"
+  Account.create!({
+    :name                   => 'Admin',
+    :email                  => admin_email,
+    :password               => admin_pass,
+    :password_confirmation  => admin_pass
+  })
+end
 
-user.admin = true
-user.save!
+## Creating Main Site ##
+main = Site.where(:name => 'Main').first
+unless main
+  puts "Creating site Main @ main.#{domain}"
+  
+  main = Site.create!({
+    :name => 'Main',
+    :seo_title => 'Main',
+    :meta_keywords => 'some meta keywords',
+    :meta_description => 'some meta description',
+    :subdomain => 'main',
+    :domains => ["main.#{domain}"]
+  })
+end
+
+## Assigning Admin to Main Site ##
+unless admin.sites.find(main.id)
+  main.memberships.build(:account => admin, :role => 'admin')
+  main.save!
+end
 
 
-main = Site.create([])
+
