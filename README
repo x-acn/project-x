@@ -1,0 +1,16 @@
+
+== Getting Started
+
+Add the following to your hosts file, as well as any subdomains and fake domains you need (main.projectx.com, hello.projectx.com, world.com)
+127.0.0.1 projectx.com
+
+Example with subdomains
+127.0.0.1 projectx.com main.projectx.com hello.projectx.com world.com
+
+Visit projectx.com:<port> for initial setup. Create a site named 'Main' with path 'main'.
+
+Loco Roles:
+Admin - Can create sites and all other tasks.
+Designer - Full control of any sites they belong to but can not create sites.
+Author - Can only author content on a site they belong to.
+
