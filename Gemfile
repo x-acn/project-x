@@ -5,12 +5,10 @@ gem 'locomotive_cms', :git => 'git://github.com/locomotivecms/engine.git', :requ
 
 group :development do
   gem 'jquery-rails'
-end
-
-group :development, :test do
   gem 'hirb'
   gem 'wirble'
 end
+
 
 #gem 'unicorn', :group => 'development'
 
