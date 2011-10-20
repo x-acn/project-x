@@ -2,11 +2,16 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.10'
 gem 'locomotive_cms', :git => 'git://github.com/locomotivecms/engine.git', :require => 'locomotive/engine'
-gem 'unicorn', :group => 'development'
+
+group :development, :test do
+  gem 'hirb'
+  gem 'wirble'
+end
+
+#gem 'unicorn', :group => 'development'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 
 # Use unicorn as the web server
 # gem 'unicorn'
