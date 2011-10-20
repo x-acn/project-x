@@ -3,7 +3,9 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.10'
 gem 'locomotive_cms', :git => 'git://github.com/locomotivecms/engine.git', :require => 'locomotive/engine'
 
-gem 'jquery-rails'
+group :development do
+  gem 'jquery-rails'
+end
 
 group :development, :test do
   gem 'hirb'
