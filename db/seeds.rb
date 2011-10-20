@@ -16,7 +16,7 @@ unless admin
   puts "-- password: #{admin_pass}"
   puts ""
   puts "Be sure to change these credentials ASAP!"
-  Account.create!({
+  admin = Account.create!({
     :name                   => 'Admin',
     :email                  => admin_email,
     :password               => admin_pass,
