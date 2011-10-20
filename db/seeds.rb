@@ -37,10 +37,12 @@ unless main
     :subdomain => 'main',
     :domains => ["main.#{domain}"]
   })
+  
+  puts "Site with ID = #{main.id} created!!"
 end
 
 ## Assigning Admin to Main Site ##
-unless admin.sites.find(main.id)
+unless (admin.sites.find(main.id) rescue nil)
   main.memberships.build(:account => admin, :role => 'admin')
   main.save!
 end
