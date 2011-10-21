@@ -14,3 +14,17 @@ Admin - Can create sites and all other tasks.
 Designer - Full control of any sites they belong to but can not create sites.
 Author - Can only author content on a site they belong to.
 
+Heroku Setup:
+heroku create [appname]
+heroku addons:add mongohq:free
+heroku addons:add sendgrid:starter
+heroku addons:add logging:expanded
+
+heroku config:add S3_KEY_ID=<your s3 key id>
+heroku config:add S3_SECRET_KEY=<your s3 secret key>
+heroku config:add S3_BUCKET=<your s3 bucket name>
+
+heroku config:add DOMAIN=<your domain>
+heroku config:add HEROKU_LOGIN=<your_heroku_login>
+heroku config:add HEROKU_PASSWORD=<your_heroku_password>
+

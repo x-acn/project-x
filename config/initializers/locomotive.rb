@@ -8,7 +8,8 @@ Locomotive.configure do |config|
    config.multi_sites do |multi_sites|
      # each new website you add will have a default entry based on a subdomain
      # and the multi_site_domain value (ex: website_1.locomotivehosting.com).
-     multi_sites.domain = 'projectx.com' #'myhostingplatform.com'
+     
+     multi_sites.domain = ENV['DOMAIN'] || 'projectx.com' ##TODO abstract to a Config class
      
      # define the reserved subdomains
      # Ex:
@@ -35,11 +36,12 @@ Locomotive.configure do |config|
   # there are 2 ways of passing heroku credentials to Locomotive
   #   - from ENV variables: HEROKU_LOGIN & HEROKU_PASSWORD
   #   - from this file, see the example below and uncomment it if needed
-  # config.heroku = {
-  #   :login      => '<your_heroku_login>',
-  #   :password   => '<your_heroku_password>'
-  # }
-
+  ##TODO abstract these or at least ENV lookups to a Config class (although watch for load order issues)
+  config.heroku = {
+     :login      => ENV['HEROKU_LOGIN'],
+     :password   => ENV['HEROKU_PASSWORD']
+  }
+  
   # Locomotive uses the DelayedJob gem for the site import module.
   # In case you want to deploy to Heroku, you will have to pay for an extra dyno.
   # If you do not mind about importing theme without DelayedJob, disable it.
@@ -81,4 +83,4 @@ Locomotive.configure do |config|
   #
   # Note: by default, rack/cache is disabled in the Heroku platform
 
-end
+endh
