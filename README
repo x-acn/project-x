@@ -18,7 +18,8 @@ Heroku Setup:
 heroku create [appname]
 heroku addons:add mongohq:free
 heroku addons:add sendgrid:starter
-heroku addons:add logging:expanded
+heroku addons:add logging:expanded (revert to basic for production)
+heroku addons:add custom_domains:basic (production will use custom_domains:wildcard at $5/mo)
 
 heroku config:add S3_KEY_ID=<your s3 key id>
 heroku config:add S3_SECRET_KEY=<your s3 secret key>
