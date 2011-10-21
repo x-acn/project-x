@@ -65,7 +65,7 @@ Locomotive.configure do |config|
   # Ex:
   # config.mailer_sender = 'support'
   # # => 'support@heroku.com' (Heroku), 'support@bushi.do' (Bushido), 'support@example.com' (Dev) or 'support@<your_hosting_platform>' (Multi-sites)
-  config.mailer_sender = 'support'
+  config.mailer_sender = 'support' ##TODO use ENV
 
   # allow apps using the engine to add their own Liquid drops, variables and similar available
   # in Liquid templates, extending the assigns used while rendering.
@@ -83,4 +83,4 @@ Locomotive.configure do |config|
   #
   # Note: by default, rack/cache is disabled in the Heroku platform
 
-endh
+end
