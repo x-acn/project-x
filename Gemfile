@@ -9,8 +9,9 @@ group :development do
   gem 'wirble'
 end
 
-
-#gem 'unicorn', :group => 'development'
+group :test do
+  gem 'rspec-rails'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
