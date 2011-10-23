@@ -1,4 +1,3 @@
-
 // usage: log('inside coolFunc', this, arguments);
 // paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
 window.log = function(){
@@ -17,4 +16,6 @@ window.log = function(){
 
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
+
+
 

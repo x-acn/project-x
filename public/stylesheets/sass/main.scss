@@ -1,7 +1,72 @@
 body {
-  background-color: #999;
+  background-color: #CBCBCB;
 }
 
+#topControls {
+  padding: 4px 0px;
+  
+  #topSearch {
+    text-align: right;
+  }
+}
+
+#mainHeaderWrap {
+  position: relative;
+  height: 150px;
+  background-color: white;
+  -moz-box-shadow: 0 0 15px #5E5E5E; 
+  -webkit-box-shadow: 0 0 15px #5E5E5E; 
+  box-shadow: 0 0 15px #5E5E5E;
+  
+  #mainHeader {
+    height: 150px;
+//    border-right: 1px solid black;
+//    border-left: 1px solid black;
+  }
+}
+
+#mainWrapper {
+  background-color: white;
+//  border: {
+//    bottom: 1px solid black;
+//    left: 1px solid black;
+//    right: 1px solid black;
+//  };
+  
+  -moz-box-shadow: 0 0 10px #5E5E5E; 
+  -webkit-box-shadow: 0 0 10px #5E5E5E; 
+  box-shadow: 0 0 10px #5E5E5E;
+
+  #mainNav {
+    background-color: #D2D9B7;
+    border-bottom: 1px solid black;
+    list-style: none; 
+    list-style-image: none; 
+    margin: 0; 
+    padding: 0;
+    li {
+      width: 80px;
+      text-align: center;
+      float: left;
+      display: block;
+      border-right: 1px solid black;
+      padding: 10px;
+    }
+  }
+
+  #main {
+    padding: 6px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  
+  #sidebar {
+  }
+  
+  #mainFooter {
+    padding: 6px;
+  }
+}
 
 
 

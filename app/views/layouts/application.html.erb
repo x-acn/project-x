@@ -36,36 +36,42 @@
 </head>
 
 <body>
-
   <div id="container">
+    
     <div id="topControls" class="container">
-      <div class="span-7 prepend-17" style="margin: 5px 0px">
+      <div id="topSearch" class="span-7 prepend-17 last">
         <input type="text" name="searchBox" value="" id="searchBox">
         <input type="button" name="search" value="Search" id="search">
       </div>
     </div>
-    <div id="mainHeaderWrap" style="background-color:white; height:100px">
-      <header id="mainPage" class="container showgrid" style="height:100px">
+    
+    <div id="mainHeaderWrap">
+      <header id="mainHeader" class="container">
         <div id="logo" class="span-18">Logo</div>
         <div id="loginSignup" class="span-6 last">
-          <input type="button" name="signUp" value="Sign me Up!" id="signUp" style="display:block">
-          <input type="button" name="login" value="Let me In!" id="login">
+          <p>Sign me Up</p>
+          <p>Let me In</p>
         </div>
       </header>
     </div>
-    <nav id="mainNav" class="container" style="background-color: grey">
-    <ul>
-      <li style="float:left">link 1</li>
-      <li style="float:left">link 2</li>
-    </ul>
-    </nav>
-    <div id="main" role="main" class="container showgrid">
-      <%= yield %>
-      
+    
+    <div id="mainWrapper" class="container">
+      <ul id="mainNav" class="clearfix">
+        <li>Home</li>
+        <li>Services</li>
+        <li>Pricing</li>
+        <li>About</li>
+      </ul>
+      <div id="main" role="main" class="span-17">
+        <%= yield %>
+      </div>
+      <div id="sidebar" class="span-6 last">
+        sidebar
+      </div>
+      <footer id="mainFooter" class="span-24">
+        Footer
+      </footer>
     </div>
-    <footer class="container">
-      Footer
-    </footer>
   </div> <!--! end of #container -->
 
 
