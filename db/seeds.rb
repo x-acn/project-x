@@ -23,6 +23,9 @@ unless admin
     :password_confirmation  => admin_pass
   })
 end
+admin.manager=true
+admin.save!
+
 
 ## Creating Main Site ##
 main = Site.where(:name => 'Main').first
@@ -40,6 +43,7 @@ unless main
   
   puts "Site with ID = #{main.id} created!!"
 end
+main.main=true
 
 unless main.domains.include? domain
   main.domains << domain
