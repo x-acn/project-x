@@ -1,0 +1,13 @@
+<% title 'Sites Listing' %>
+
+<% content_for :submenu do %>
+  <%= render_cell 'admin/settings_menu', :show %>
+<% end %>
+
+<p><%= 'TODO: Fix menu icon, colouring and submenu buttons. Pagination. Filtering. Show by Site or by Account. Render without form (get rid of Save button below)' %></p>
+
+<%= semantic_form_for @sites.first, :url => admin_current_site_url, :html => { :class => 'save-with-shortcut' } do |f| %>
+  <%= render 'xform', :f => f  %>
+  <%= render 'admin/shared/form_actions', :button_label => :update %>
+<% end %>
+

@@ -1,0 +1,20 @@
+- content_for :head do
+  = include_javascripts :site
+
+- @sites.each do |site|
+  = f.foldable_inputs :name => "#{site.name} (#{site.domains_without_subdomain.join(', ')})" do
+    %li.path
+      %label= 'Subdomain:'
+      %em= site.full_subdomain
+    %li.path
+      %label= 'Domains:'
+      %em= site.domains_without_subdomain.join(', ')
+    %li.path
+      %label= 'Accounts:'
+    - site.memberships.each do |membership|
+      %li.item.membership
+        - account = membership.account
+        %strong.role= membership.role
+        %em.email= account.email
+        %em.name= account.name
+

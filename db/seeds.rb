@@ -41,11 +41,20 @@ unless main
   puts "Site with ID = #{main.id} created!!"
 end
 
+unless main.domains.include? domain
+  main.domains << domain
+end
+
+#if Rails.env.development?
+#  unless main.domains.include? 'localhost'
+#    main.domains << 'localhost'
+#  end
+#end
+
 ## Assigning Admin to Main Site ##
 unless (admin.sites.find(main.id) rescue nil)
   main.memberships.build(:account => admin, :role => 'admin')
-  main.save!
 end
 
-
+main.save!
 
