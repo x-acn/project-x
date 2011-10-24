@@ -1,5 +1,14 @@
+$nav_footer: #D2D9B7;
+$page: $nav_footer - 50;
+
+@mixin shadow () {
+  -moz-box-shadow: 0 0 15px #5E5E5E; 
+  -webkit-box-shadow: 0 0 15px #5E5E5E; 
+  box-shadow: 0 0 15px #5E5E5E;
+}
+
 body {
-  background-color: #CBCBCB;
+  background-color: $page;
 }
 
 #topControls {
@@ -14,32 +23,21 @@ body {
   position: relative;
   height: 150px;
   background-color: white;
-  -moz-box-shadow: 0 0 15px #5E5E5E; 
-  -webkit-box-shadow: 0 0 15px #5E5E5E; 
-  box-shadow: 0 0 15px #5E5E5E;
+  @include shadow();
   
   #mainHeader {
     height: 150px;
-//    border-right: 1px solid black;
-//    border-left: 1px solid black;
+    .logo {
+      margin-left: 30px;
+      font-size: 350%;
+    }
   }
 }
 
 #mainWrapper {
-  background-color: white;
-//  border: {
-//    bottom: 1px solid black;
-//    left: 1px solid black;
-//    right: 1px solid black;
-//  };
-  
-  -moz-box-shadow: 0 0 10px #5E5E5E; 
-  -webkit-box-shadow: 0 0 10px #5E5E5E; 
-  box-shadow: 0 0 10px #5E5E5E;
-
+  background-color: $nav_footer;
+  @include shadow();
   #mainNav {
-    background-color: #D2D9B7;
-    border-bottom: 1px solid black;
     list-style: none; 
     list-style-image: none; 
     margin: 0; 
@@ -49,21 +47,22 @@ body {
       text-align: center;
       float: left;
       display: block;
-      border-right: 1px solid black;
+      border-right: 1px solid gray;
       padding: 10px;
     }
   }
 
   #main {
+    background-color: white;
     padding: 6px;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
   }
   
   #sidebar {
+    background-color: white;
   }
   
   #mainFooter {
+    height: 50px;
     padding: 6px;
   }
 }
