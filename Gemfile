@@ -5,8 +5,7 @@ gem 'locomotive_cms', :git => 'git://github.com/locomotivecms/engine.git', :requ
 
 group :development do
   gem 'jquery-rails'
-  gem 'hirb'
-  gem 'wirble'
+  gem 'pry-rails'
 end
 
 
