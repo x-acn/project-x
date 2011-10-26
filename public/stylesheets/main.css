@@ -1,18 +1,37 @@
 body {
-  background-color: #a0a785; }
+  background-color: #9ead64; }
+
+#bg {
+  position: fixed;
+  top: 180;
+  left: 0;
+  z-index: 444; }
+
+.bgwidth {
+  width: 100%; }
+
+.bgheight {
+  height: 100%; }
 
 #topControls {
-  padding: 4px 0px; }
+  padding: 4px 0px;
+  position: fixed;
+  z-index: 666;
+  width: 100%;
+  background-image: url("../images/ios-linen.jpg"); }
   #topControls #topSearch {
     text-align: right; }
 
 #mainHeaderWrap {
-  position: relative;
+  -moz-box-shadow: 6px 6px 12px #565f32;
+  -webkit-box-shadow: 6px 6px 12px #565f32;
+  box-shadow: 6px 6px 12px #565f32;
+  position: fixed;
+  z-index: 666;
+  width: 100%;
+  top: 28px;
   height: 150px;
-  background-color: white;
-  -moz-box-shadow: 0 0 15px #5E5E5E;
-  -webkit-box-shadow: 0 0 15px #5E5E5E;
-  box-shadow: 0 0 15px #5E5E5E; }
+  background-color: #f1f3e9; }
   #mainHeaderWrap #mainHeader {
     height: 150px; }
     #mainHeaderWrap #mainHeader .logo {
@@ -20,6 +39,9 @@ body {
       font-size: 350%; }
 
 #mainWrapper {
+  position: relative;
+  z-index: 500;
+  top: 178px;
   background-color: #d2d9b7;
   -moz-box-shadow: 0 0 15px #5E5E5E;
   -webkit-box-shadow: 0 0 15px #5E5E5E;

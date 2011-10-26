@@ -36,6 +36,7 @@
 </head>
 
 <body>
+  <%= image_tag "ios-linen.jpg", :id => "bg" %>
   <div id="container">
     
     <div id="topControls" class="container">
@@ -78,7 +79,7 @@
 
 
   <!-- JavaScript at the bottom for fast page loading -->
-  <%= javascript_include_tag :defaults, "plugins" %>
+  <%= javascript_include_tag :defaults, "plugins", "fixed_background" %>
 
 	
   <!-- Change UA-XXXXX-X to be your site's ID -->
