@@ -1,6 +1,5 @@
 $nav_footer: #D2D9B7;
-$page: darken($nav_footer, 25%);
-$header: lighten($nav_footer, 15%);
+$page: $nav_footer - 50;
 
 @mixin shadow () {
   -moz-box-shadow: 0 0 15px #5E5E5E; 
@@ -8,23 +7,12 @@ $header: lighten($nav_footer, 15%);
   box-shadow: 0 0 15px #5E5E5E;
 }
 
-
-
 body {
   background-color: $page;
 }
 
-#bg { position: fixed; top: 180; left: 0; z-index: 444;}
-.bgwidth { width: 100%; }
-.bgheight { height: 100%; }
-
 #topControls {
   padding: 4px 0px;
-  position:fixed;
-  z-index: 666;
-  width: 100%;
-//  background-color: $page;
-  background-image: url("../images/ios-linen.jpg");
   
   #topSearch {
     text-align: right;
@@ -32,16 +20,10 @@ body {
 }
 
 #mainHeaderWrap {
-  -moz-box-shadow: 6px 6px 12px darken($nav_footer, 50%); 
-  -webkit-box-shadow: 6px 6px 12px darken($nav_footer, 50%); 
-  box-shadow: 6px 6px 12px darken($nav_footer, 50%);
-  position:fixed;
-  z-index: 666;
-  width: 100%;
-  top:28px;
+  position: relative;
   height: 150px;
-  background-color: $header;
-//  @include shadow();
+  background-color: white;
+  @include shadow();
   
   #mainHeader {
     height: 150px;
@@ -53,9 +35,6 @@ body {
 }
 
 #mainWrapper {
-  position:relative;
-  z-index: 500;
-  top:178px;
   background-color: $nav_footer;
   @include shadow();
   #mainNav {
