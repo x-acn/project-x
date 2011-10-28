@@ -4,3 +4,4 @@ log/*.log
 tmp/
 .DB_Store
 Procfile
+.bin

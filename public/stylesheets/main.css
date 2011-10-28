@@ -1,0 +1,103 @@
+body {
+  background-color: #a0a785; }
+
+#topControls {
+  padding: 4px 0px; }
+  #topControls #topSearch {
+    text-align: right; }
+
+#mainHeaderWrap {
+  position: relative;
+  height: 150px;
+  background-color: white;
+  -moz-box-shadow: 0 0 15px #5E5E5E;
+  -webkit-box-shadow: 0 0 15px #5E5E5E;
+  box-shadow: 0 0 15px #5E5E5E; }
+  #mainHeaderWrap #mainHeader {
+    height: 150px; }
+    #mainHeaderWrap #mainHeader .logo {
+      margin-left: 30px;
+      font-size: 350%; }
+
+#mainWrapper {
+  background-color: #d2d9b7;
+  -moz-box-shadow: 0 0 15px #5E5E5E;
+  -webkit-box-shadow: 0 0 15px #5E5E5E;
+  box-shadow: 0 0 15px #5E5E5E; }
+  #mainWrapper #mainNav {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0; }
+    #mainWrapper #mainNav li {
+      width: 80px;
+      text-align: center;
+      float: left;
+      display: block;
+      border-right: 1px solid gray;
+      padding: 10px; }
+  #mainWrapper #main {
+    background-color: white;
+    padding: 6px; }
+  #mainWrapper #sidebar {
+    background-color: white; }
+  #mainWrapper #mainFooter {
+    height: 50px;
+    padding: 6px; }
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+.ir br {
+  display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
