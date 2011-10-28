@@ -1,13 +1,12 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.10'
-gem 'locomotive_cms', :require => 'locomotive/engine', :path => '../engine' #:git => 'git://github.com/locomotivecms/engine.git', 
+gem 'locomotive_cms', :require => 'locomotive/engine', :git => 'git://github.com/locomotivecms/engine.git' 
 gem 'mixable_engines'
 
 group :development do
   gem 'jquery-rails'
-  gem 'hirb'
-  gem 'wirble'
+  gem 'pry-rails'
 end
 
 group :test do
