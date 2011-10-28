@@ -269,8 +269,4 @@ DEPENDENCIES
   locomotive_cms!
   pry-rails
   rails (= 3.0.10)
-<<<<<<< HEAD
   rspec-rails
-  wirble
-=======
->>>>>>> main_page
