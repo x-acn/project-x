@@ -27,7 +27,7 @@ class SignupController < ApplicationController
     
     if account.save! && site.save!
       sign_in(account)
-      binding.pry
+      # binding.pry
       # current_site = site
       redirect_to "http://#{site_params[:subdomain]}.#{Locomotive.config.domain}:3000/"
     end
