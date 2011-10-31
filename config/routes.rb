@@ -1,5 +1,8 @@
 ProjectX::Application.routes.draw do
   get "main/index"
+  
+  match 'main/signup' => "signup#new", :via => :get
+  match 'main/signup' => "signup#create", :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

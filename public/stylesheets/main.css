@@ -8,7 +8,7 @@ body {
 
 #mainHeaderWrap {
   position: relative;
-  height: 150px;
+  height: 200px;
   background-color: white;
   -moz-box-shadow: 0 0 15px #5E5E5E;
   -webkit-box-shadow: 0 0 15px #5E5E5E;
@@ -44,6 +44,57 @@ body {
   #mainWrapper #mainFooter {
     height: 50px;
     padding: 6px; }
+    
+/* TODO: remove or fix this -- the overlayed element */
+/* get rid of those system borders being generated for A tags */
+a:active {
+  outline:none;
+}
+
+:focus {
+  -moz-outline-style:none;
+}
+.overlay {
+
+	/* initially overlay is hidden */
+	display:none;
+
+	/* growing background image */
+  background-image:url(../images/white.png);
+
+	/* 
+		width after the growing animation finishes
+		height is automatically calculated
+	*/
+	width:640px;		
+
+	/* some padding to layout nested elements nicely  */
+	padding:35px;
+
+	/* a little styling */	
+	font-size:11px;
+}
+/* use a semi-transparent image for the overlay */
+#signupOverlay {
+	background-image:url(../images/transparent.png);
+	color:#efefef;
+	height:450px;
+}
+
+/* container for external content. uses vertical scrollbar, if needed */
+div.contentWrap {
+	height:441px;
+	overflow-y:auto;
+}
+
+/* default close button positioned on upper right corner */
+.overlay .close {
+	background-image:url(../images/close.png);
+	position:absolute; right:5px; top:5px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.

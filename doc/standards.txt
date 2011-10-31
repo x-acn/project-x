@@ -1,0 +1,3 @@
+HTML:
+  id      - "lowerCamelCase"
+  class   - "dash-separated"

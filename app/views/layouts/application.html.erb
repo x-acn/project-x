@@ -47,12 +47,25 @@
     
     <div id="mainHeaderWrap">
       <header id="mainHeader" class="container">
-        <div id="logo" class="span-18">
-          <p class="logo">Loko</p>
+        <div id="logo" class="span-16">
+          <%= image_tag "logo.jpg", :title => "Logo", :class => "img-logo" %>
         </div>
-        <div id="loginSignup" class="span-6 last">
-          <p>Sign me Up</p>
-          <p>Let me In</p>
+        <div id="loginSignup" class="span-8 last">
+          <p>
+            <%= link_to({:controller => "signup", :action => "new"}, {:class => "signup-modal", :rel => "#signupOverlay"}) do %>
+              <%= image_tag "signup.jpg", :class => "img-button" %>
+            <% end %>
+          </p>
+          <p>
+            <a href="http://projectx.com:3000/404.html" rel="" style="text-decoration:none">
+              <button type="button">Login</button>
+            </a>
+          </p>
+        </div>
+        <!-- overlayed element -->
+        <div class="overlay close" id="signupOverlay">
+        	<!-- the external content is loaded inside this tag -->
+        	<div class="content-wrap"></div>
         </div>
       </header>
     </div>
@@ -76,11 +89,13 @@
     </div>
   </div> <!--! end of #container -->
 
-
   <!-- JavaScript at the bottom for fast page loading -->
-  <%= javascript_include_tag :defaults, "plugins" %>
-
-	
+  <%= javascript_include_tag "plugins", :defaults %>
+  
+  <!-- jQuery Tools -->
+  <!-- TODO: add offline version -->
+  <%= javascript_include_tag "http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js" %>
+  
   <!-- Change UA-XXXXX-X to be your site's ID -->
   <script>
     window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];

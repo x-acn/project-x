@@ -1,0 +1,21 @@
+<% form_tag({:controller => 'signup', :action => 'create'}, :method => 'post', :id => "signupForm") do |f| %>
+  <%= label_tag :user_name, "User Name", :class => "span-2" %>
+  <%= text_field_tag :user_name %>
+  <br />
+  <%= label_tag :email, "Email", :class => "span-2" %>
+  <%= text_field_tag :email %>
+  <br />
+  <%= label_tag :password, "Password", :class => "span-2" %>
+  <%= password_field_tag :password %>
+  <br />
+  <%= label_tag :password_confirmation, "Confirmation", :class => "span-2" %>
+  <%= password_field_tag :password_confirmation %>
+  <br />
+  <%= label_tag :site_name, "Site Name", :class => "span-2" %>
+  <%= text_field_tag :site_name %>
+  <br />
+  <%= label_tag :subdomain, "Subdomain", :class => "span-2" %>
+  <%= text_field_tag :subdomain %>
+  <br />
+  <%= submit_tag "Save changes", :id => "submit", :name => "submit", :class => "signup", :disabled => false, :disable_with => "Please wait..." %>
+<% end -%>
