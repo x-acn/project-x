@@ -5,10 +5,11 @@ $(function() {
   $(".signup-modal").overlay({
   
     mask: {
-  		color: '#bbb',
+  		color: '#a0a785',
   		loadSpeed: 200,
   		opacity: 0.9
   	},
+    
     effect: 'apple',
     
     closeOnClick: false,
